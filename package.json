@@ -1,0 +1,113 @@
+{
+  "name": "@hardmachinelabs/zod-config",
+  "version": "0.2.0",
+  "description": "Type-safe Zod v4 configuration utilities with an optional NestJS adapter.",
+  "keywords": [
+    "zod",
+    "config",
+    "environment",
+    "nestjs",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordachmakaya/zod-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jordachmakaya/zod-config/issues"
+  },
+  "homepage": "https://jordach.dev/tools/zod-config",
+  "author": {
+    "name": "Jordach Makaya",
+    "url": "https://jordach.dev"
+  },
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
+      "require": "./dist/core/index.cjs"
+    },
+    "./nest": {
+      "types": "./dist/nest/index.d.ts",
+      "import": "./dist/nest/index.js",
+      "require": "./dist/nest/index.cjs"
+    },
+    "./global": {
+      "types": "./dist/global/index.d.ts",
+      "import": "./dist/global/index.js",
+      "require": "./dist/global/index.cjs"
+    },
+    "./testing": {
+      "types": "./dist/testing/index.d.ts",
+      "import": "./dist/testing/index.js",
+      "require": "./dist/testing/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup && tsc -p tsconfig.build.json",
+    "changeset": "changeset",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "test:types": "tsd",
+    "pack:dry-run": "pnpm publish --dry-run --no-git-checks",
+    "version-packages": "changeset version",
+    "publish:npm": "changeset publish",
+    "release": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run test:types && changeset publish",
+    "prepublishOnly": "pnpm run typecheck && pnpm run test && pnpm run build && pnpm run test:types"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0 || ^11.0.0",
+    "@nestjs/config": "^3.0.0 || ^4.0.0",
+    "zod": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@nestjs/common": {
+      "optional": true
+    },
+    "@nestjs/config": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0",
+    "@nestjs/common": "^11.1.26",
+    "@nestjs/config": "^4.0.4",
+    "@nestjs/core": "^11.1.26",
+    "@nestjs/testing": "^11.1.26",
+    "@types/node": "^22.0.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "tsd": "^0.33.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitepress": "^1.6.4",
+    "vitest": "^3.0.0",
+    "zod": "^4.0.0"
+  },
+  "tsd": {
+    "directory": "test-d"
+  }
+}

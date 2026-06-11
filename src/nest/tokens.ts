@@ -1,0 +1,1 @@
+export const ZOD_CONFIG_READER = Symbol('ZOD_CONFIG_READER')

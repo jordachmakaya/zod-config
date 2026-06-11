@@ -1,0 +1,65 @@
+name: Bug report
+description: Report a reproducible bug in @hardmachinelabs/zod-config.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      placeholder: "20.x"
+    validations:
+      required: true
+  - type: input
+    id: package-manager
+    attributes:
+      label: Package manager
+      placeholder: "pnpm 10.x"
+    validations:
+      required: true
+  - type: input
+    id: framework
+    attributes:
+      label: Framework, if using NestJS
+      placeholder: "NestJS 11.x, or not applicable"
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest steps needed to reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: schema
+    attributes:
+      label: Minimal schema/config
+      description: Include only the smallest schema/config needed to reproduce.
+      render: ts
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs/errors with secrets removed
+      description: Remove tokens, passwords, database URLs, and other secrets.
+      render: shell

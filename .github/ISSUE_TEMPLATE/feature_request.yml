@@ -1,0 +1,44 @@
+name: Feature request
+description: Propose a new API or behavior change.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-api
+    attributes:
+      label: Proposed API
+      description: Show the API or usage you would like to write.
+      render: ts
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impacted package area
+      multiple: true
+      options:
+        - core
+        - nest
+        - global
+        - testing
+        - package exports
+        - documentation
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security concerns
+      description: Could this expose secrets, add logging, or change env access boundaries?

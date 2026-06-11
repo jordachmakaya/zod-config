@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+docs/.vitepress/dist/
+
+# Package artifacts
+*.tgz
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Coverage / test artifacts
+coverage/
+*.lcov
+
+# Temporary files
+tmp/
+temp/
+.cache/
+# Internal planning files
+Mission.md
+Project_breif.md
+node_modules/
+dist/
+docs/.vitepress/dist/
+.env
+*.tgz
+docs/.vitepress/cache/
