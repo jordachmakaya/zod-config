@@ -16,7 +16,7 @@ Type-safe Zod v4 configuration utilities for TypeScript and NestJS.
 You get early validation, typed access, redaction-safe errors, and an optional NestJS adapter without importing NestJS from the root package.
 
 
-![Zod Config by Jordach Makaya](./assets/zod-config-by-jordach-makaya.png)
+![Zod Config by Jordach Makaya](https://raw.githubusercontent.com/jordachmakaya/zod-config/main/assets/zod-config-by-jordach-makaya.png)
 
 
 ## What You Get
