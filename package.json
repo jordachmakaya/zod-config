@@ -97,7 +97,7 @@
     "@nestjs/config": "^4.0.4",
     "@nestjs/core": "^11.1.26",
     "@nestjs/testing": "^11.1.26",
-    "@types/node": "^22.0.0",
+    "@types/node": "^25.9.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
     "tsd": "^0.33.0",
